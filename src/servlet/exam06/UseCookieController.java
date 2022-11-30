@@ -28,8 +28,7 @@ public class UseCookieController extends HttpServlet {
 
 				//JSP에서 읽을수 있도록 설정
 				request.setAttribute("useremail", value);
-			}
-			if(name.equals("userid")) {
+			}else if(name.equals("userid")) {
 				//쿠키값 읽기
 				String value = cookie.getValue();
 				//JSP에서 읽을수 있도록 설정				
