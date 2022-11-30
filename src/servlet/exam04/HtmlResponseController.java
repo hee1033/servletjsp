@@ -32,6 +32,7 @@ public class HtmlResponseController extends HttpServlet {
 		pw.flush();
 		pw.close();*/
 		
+		//JSP로 이동
 		request.getRequestDispatcher("/WEB-INF/views/exam04/html.jsp").forward(request, response);
 		
 		
