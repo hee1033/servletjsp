@@ -21,7 +21,7 @@ public class ContentController extends HttpServlet {
 	
 	@Override
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		response.sendRedirect("/servletjsp/HomeController");
+		response.sendRedirect(request.getContextPath()+"/HomeController");
 	}
 	
 

@@ -18,7 +18,7 @@ public class BoardWriteController extends HttpServlet {
 	//클라이언트가 요청할 때 마다 실행
 		@Override
 		protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-			request.getRequestDispatcher("/WEB-INF/views/exam08/writeForm.jsp").forward(request, response);;
+			request.getRequestDispatcher("/WEB-INF/views/exam08/writeForm.jsp").forward(request, response);
 		}
 		
 		@Override
@@ -29,12 +29,12 @@ public class BoardWriteController extends HttpServlet {
 			//클라이언트가 보낸 데이터 얻기
 			Board board = new Board();
 			board.setBtitle(request.getParameter("btitle"));
-			board.setBcontentType(request.getParameter("bcontent"));
+			board.setBfileType(request.getParameter("bcontent"));
 
 			//서비스로 회원가입 요청
 			ServletContext application = request.getServletContext();
-			BoardService userService =(BoardService) application.getAttribute("boardService");
-			userService.write(board);
+			BoardService boardService = (BoardService) application.getAttribute("boardService");
+			boardService.write(board);
 			
 			response.sendRedirect("ContentController");
 	

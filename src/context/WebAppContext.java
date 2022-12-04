@@ -20,7 +20,7 @@ public class WebAppContext implements ServletContextListener {
 		
 		//ServletContext 객체에 데이터(객체) 저장
 		application.setAttribute("userService", new UserService(application));
-		application.setAttribute("boardSerive", new BoardService(application));
+		application.setAttribute("boardService", new BoardService(application));
 		
 		application.setAttribute("userDao", new UserDao());
 		application.setAttribute("boardDao", new BoardDao());
